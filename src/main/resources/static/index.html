@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>TodoApp • Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container py-5">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h1 class="h3 mb-3">TodoApp (Demo CI/CD)</h1>
+        <p class="text-muted mb-4">
+          Esta app expone endpoints REST para la academia (Azure Pipelines → Artifact Registry → GKE).
+        </p>
+
+        <h2 class="h5">Endpoints</h2>
+        <ul>
+          <li><code>/actuator/health/liveness</code> — healthcheck liveness</li>
+          <li><code>/todoapp/greeting</code> — saludo simple</li>
+          <li><code>/todoapp/todos</code> — ejemplo de lista</li>
+        </ul>
+
+        <div class="mt-4 d-flex gap-2 flex-wrap">
+          <a class="btn btn-primary" href="/actuator/health/liveness" target="_blank">Probar Liveness</a>
+          <a class="btn btn-outline-secondary" href="/todoapp/greeting" target="_blank">Probar /todoapp/greeting</a>
+          <a class="btn btn-outline-secondary" href="/todoapp/todos" target="_blank">Probar /todoapp/todos</a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-center mt-4 text-muted">
+      <small>Build: demo • Powered by Spring Boot</small>
+    </footer>
+  </div>
+</body>
+</html>
