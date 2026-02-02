@@ -26,4 +26,12 @@ public class TodoAppController {
             "Deploy a GKE"
         });
     }
+    @GetMapping("/todos2")
+    public ResponseEntity<Object> list() {
+        return ResponseEntity.ok(new String[]{
+            "Comprar café",
+            "Revisar pipelines",
+            "Deploy a GKE"
+        });
+    }
 }
